@@ -24,6 +24,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'^$', remoteuser.login, name="login"),
+    url(r'^test/$', remoteuser.login, name="test"),
     url(r'^Register1/$', remoteuser.Register1, name="Register1"),
     url(r'^Predict_Traffic_Type/$', remoteuser.Predict_Traffic_Type, name="Predict_Traffic_Type"),
     url(r'^ViewYourProfile/$', remoteuser.ViewYourProfile, name="ViewYourProfile"),
