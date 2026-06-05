@@ -18,21 +18,24 @@ from sklearn.ensemble import VotingClassifier
 from Remote_User.models import ClientRegister_Model,traffic_prediction_type,detection_ratio,detection_accuracy
 
 def login(request):
-
-
     if request.method == "POST" and 'submit1' in request.POST:
 
         username = request.POST.get('username')
         password = request.POST.get('password')
+
         try:
-            enter = ClientRegister_Model.objects.get(username=username,password=password)
+            enter = ClientRegister_Model.objects.get(
+                username=username,
+                password=password
+            )
+
             request.session["userid"] = enter.id
-
             return redirect('ViewYourProfile')
-        except:
-            pass
 
-    return render(request,'RUser/login.html')
+        except Exception as e:
+            return HttpResponse(str(e))
+
+    return render(request, 'RUser/login.html')
 
 def Add_DataSet_Details(request):
 
