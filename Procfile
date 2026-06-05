@@ -1,0 +1,1 @@
+web: gunicorn amulti_stream_feature_fusion_approach.wsgi:application
