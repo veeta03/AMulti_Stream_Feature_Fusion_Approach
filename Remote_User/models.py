@@ -16,25 +16,22 @@ class ClientRegister_Model(models.Model):
 
 class traffic_prediction_type(models.Model):
 
-
-    TRAFFIC_DATE= models.CharField(max_length=30000)
-    TRAFFIC_TIME= models.CharField(max_length=30000)
-    BOROUGH= models.CharField(max_length=30000)
-    ZIP_CODE= models.CharField(max_length=30000)
-    LATITUDE= models.CharField(max_length=30000)
-    LONGITUDE= models.CharField(max_length=30000)
-    LOCATION= models.CharField(max_length=30000)
-    ON_STREET_NAME= models.CharField(max_length=30000)
-    CROSS_STREET_NAME= models.CharField(max_length=30000)
-    OFF_STREET_NAME= models.CharField(max_length=30000)
-    CONTRIBUTING_FACTOR_VEHICLE= models.CharField(max_length=30000)
-    REFERENCE_ID= models.CharField(max_length=30000)
-    TRAFFIC_VEHICLE_TYPE_CODE1= models.CharField(max_length=30000)
-    TRAFFIC_VEHICLE_TYPE_CODE2= models.CharField(max_length=30000)
-    Junction= models.CharField(max_length=30000)
-    Prediction= models.CharField(max_length=30000)
-
-
+    TRAFFIC_DATE = models.CharField(max_length=100)
+    TRAFFIC_TIME = models.CharField(max_length=100)
+    BOROUGH = models.CharField(max_length=100)
+    ZIP_CODE = models.CharField(max_length=50)
+    LATITUDE = models.CharField(max_length=50)
+    LONGITUDE = models.CharField(max_length=50)
+    LOCATION = models.CharField(max_length=300)
+    ON_STREET_NAME = models.CharField(max_length=300)
+    CROSS_STREET_NAME = models.CharField(max_length=300)
+    OFF_STREET_NAME = models.CharField(max_length=300)
+    CONTRIBUTING_FACTOR_VEHICLE = models.CharField(max_length=300)
+    REFERENCE_ID = models.CharField(max_length=100)
+    TRAFFIC_VEHICLE_TYPE_CODE1 = models.CharField(max_length=100)
+    TRAFFIC_VEHICLE_TYPE_CODE2 = models.CharField(max_length=100)
+    Junction = models.CharField(max_length=100)
+    Prediction = models.CharField(max_length=100)
 class detection_accuracy(models.Model):
 
     names = models.CharField(max_length=300)
